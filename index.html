@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+    <link rel="icon" href="./resources/melogo copy.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Ezzat Abed</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              👨‍💻I'm Ezzat Abed, and my journey into programming has been both exciting and challenging. I've dedicated myself to mastering languages like HTML, CSS, JavaScript, and SQL, allowing me to delve into both front-end and back-end development. Along the way, I've embraced various frameworks, leveraging their power to enhance my skills and streamline my development process. Additionally, my exploration of graphic web design using tools like Figma has added another dimension to my expertise, enabling me to create visually stunning and user-friendly interfaces.
+            </p>
+            <p>
+              🏋️‍♂️Beyond the realm of programming, I'm deeply passionate about fitness. Over the past five years, I've immersed myself in the world of training and nutrition, seeking to understand the nuances of building muscle and losing fat. Through disciplined training and meticulous planning, I've honed my knowledge of effective workout routines and dietary strategies, allowing me to achieve and maintain my fitness goals. Fitness isn't just a hobby for me—it's a lifestyle that empowers me to strive for excellence in all aspects of my life.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="./resources/me copy.jpg"
+            alt="A photo of Ezzat Abed"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>JavaScript Syntax I</h3>
+          </summary>
+          <video class="project-image" controls width="400" height="300">
+            <source src="./resources/js-syntax video.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="project-description">
+            My first project after learning the JavaScript Syntax.
+          </p>
+        </details>
+
+        <details class="project">
+
+          <summary class="project-title">
+            <h3>JavaScript Syntax II</h3>
+          </summary>
+          <video class="project-image" controls width="400" height="300">
+            <source src="./resources/website-color-change.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="project-description">
+            Another project using the JavaScript Syntax to change the background color.
+          </p>
+        </details>
+
+        <details class="project">
+          <summary class="project-title">
+            <h3>Jamming</h3>
+          </summary>
+          <video class="project-image" controls width="400" height="300">
+            <source src="./resources/spotifyapi-video copy.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="project-description">
+            A playlist react app using the Spotify API.
+          </p>
+        </details>
+
+        <details class="project">
+          <summary class="project-title">
+            <h3>Chat App</h3>
+          </summary>
+          <video class="project-image" controls width="400" height="300">
+            <source src="./resources/fullstack copy.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="project-description">
+            My first full-stack application using React, Fireship, and Bootstrap.
+          </p>
+        </details>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Have an interesting project? I would love to hear about it!</p>
+        <div class="contact-links">
+            <a href="mailto:ezzatabed.31@gmail.com">Gmail</a>
+            <a href="https://www.instagram.com/ezzatabed/" target="_blank">Instagram</a>
+            <a href="https://twitter.com/EZcoding_" target="_blank">Twitter</a>
+            <a href="https://github.com/ezzatabed" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/ezzat-abed-b7b618301/" target="_blank">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with my <span class="heart">🖥️</span> in Montreal</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "10-1-2023";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
