@@ -112,9 +112,11 @@
 
     <footer>Made with my <span class="heart">🖥️</span> in Montreal</footer>
   </body>
-  <script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
     const timeContainer = document.getElementById("time-container");
-    const BIRTH_DAY = "10-1-2023";
+    const BIRTH_DAY = "2023-01-10"; // Corrected date format
     const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
     const intlNumberFormatter = new Intl.NumberFormat("en-US");
 
@@ -126,5 +128,7 @@
 
       timeContainer.innerText = intlNumberFormatter.format(difference);
     }, 1000);
-  </script>
+  });
+</script>
+
 </html>
